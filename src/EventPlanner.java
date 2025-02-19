@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class EventPlanner {
+
+    // Creates the UI
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Event Calendar");
@@ -16,6 +18,7 @@ public class EventPlanner {
         });
     }
 
+    // Adds a couple of default events to the panel (one project and one meeting)
     static void addDefaultEvents(EventListPanel events) {
         events.addEvent(new Deadline("Project Deadline", java.time.LocalDateTime.now().plusDays(7)));
         events.addEvent(new Meeting("Team Meeting", java.time.LocalDateTime.now().plusDays(2),
